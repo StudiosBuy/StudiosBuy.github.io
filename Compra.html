@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\BRUNNO-18\Pictures\Perfil.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/JRB0FGq6/Perfil.png">
     <title>Compra</title>
     <style>
         body {
@@ -70,19 +70,18 @@
             var res = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
             var correoValido = res.test(correo);
             var link = get()
-            if (link === "1") {
-                localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
-                localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
-            }
-
-            var que = localStorage.get("elque")
-            var asunto = encodeURIComponent(localStorage.get("elasunto"));
-
             if (correoValido) {
                 document.getElementById("correo").style.borderColor = "green";
+                    if (link === "1") {
+                        localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
+                        localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
+                    }
+            var que = localStorage.get("elque")
+            var asunto = encodeURIComponent(localStorage.get("elasunto"));
             var cuerpo = encodeURIComponent(correo + que);
             var mailtoLink = 'mailto:brunimendoza16@gmail.com?subject=' + asunto + '&body=' + cuerpo;
             window.location.href = mailtoLink;
+
             } else {
                 document.getElementById("correo").style.borderColor = "red"
                 alert("Invalido");
