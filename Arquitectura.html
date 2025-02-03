@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Arquitectura</title>
+        <link rel="shortcut icon" type="image/x-icon" href="Logodepagina.ico">
+        <html lang="es">
+        <meta charset="utf=8">
+        <link rel="stylesheet" type="text/css" href="estilos3.css" />
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: image-set(
+                    url(U1.jpg)1x
+                );
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            html{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            @font-face{
+                font-family: 'Bauhaus 93';
+                src: url(BAUHS93.TTF) format('truetype');
+            }
+            h1{
+                font-family: 'Bauhaus 93', sans-serif;
+            }
+            .barra{
+                background-color: #000;
+                display: block;
+                color: white;
+                text-align: center;
+                line-height: 500%;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .a{
+                text-decoration: none;
+                display: block;
+                color: white;
+                padding: 10px 15px;
+            }
+            .a:hover{
+                background-color: rgb(60, 60, 60);
+                text-shadow: 5px 5px 5px;
+                transition: 0.5s;
+            }
+        .class1{
+            top: 500px;
+            left: 425px;
+            position: absolute;
+            background-color: red;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: solid black;
+            border-width: 1px;
+            padding: 7px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .class1:hover{
+            text-shadow: 5px 5px 5px;
+            box-shadow: 0px 0px 10px 10px gray;
+        }
+        .image{
+            position: absolute;
+            left: 20px;
+            border-radius: 10px;
+            top: 200px;
+        }
+        .barra {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="barra">Arquitectura</h1>
+    <img src="https://i.ibb.co/hx1S1zgk/1.png" width="500px" class="image">
+    <a href="https://www.dropbox.com/scl/fi/6vg3hzgmqo4ws081jeut5/Pedazo-de-Alambre-obj.rar?rlkey=sdu5k70xqhn1r90aeiod87pbv&dl=1">
+        <button class="class1">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/DcBdT3J/Ciudad.png" width="500px" style="left: 700px;" class="image">
+    <a href="Compra.html">
+        <button class="class1" style="left: 650px;">Descarga | 1 USD</button>
+    </a>
+    <img src="https://i.ibb.co/xtP8y584/2.png" width="500px" style="top: 600px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/n046rgo684lizb9195boe/Ladrillo-glb.rar?rlkey=o08gd0fgw5qpt7uq9j04nvu0q&dl=1">
+        <button class="class1" style="top: 900px;">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/6cc8nvk4/3.png" width="500px" style="top: 600px; left: 700px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/e8hyex958uh8x1yqht4lg/Piso-obj.rar?rlkey=efdmso3fofwxviqoyivtdde3q&dl=1">
+        <button class="class1" style="top: 900px; left: 650px;">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/YTQypz8j/4.png" width="500px" style="top: 1000px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/ykslfm5e2ic32s51o320p/Teja.rar?rlkey=uhbxm4e5uitnct2u8ruhhduh1&dl=1">
+        <button class="class1" style="top: 1300px;">Descarga | Gratis</button>
+    </a>
+</body>
+</html>
+
+        <div class="content">     
+        <button class="menu" alt="b" id="k" onclick="menu()"></button>
+        <div class="menu2" id="a">
+            <a href="Universal Buy.html" class="a">Inicio</a>
+            <a href="Modelos3D.html" class="a">Modelos3D</a>
+        </div>
+        <script>
+            var b = document.getElementById("a")
+            var p = document.getElementById("k")
+            function menu() {
+                setTimeout(extremo2, 100)
+                p.style.boxShadow = "0px 0px 20px 3px white";
+                p.style.transition = "0.1s"
+                if(b.style.display=="block"){
+                    setTimeout(extremo, 1000)
+                    b.style.animation = "reversa 1s forwards"
+                }
+                else{
+                    
+                    b.style.display="block"
+                    b.style.animation = "movimiento 1s forwards"
+                }
+            }
+            function extremo() {
+                b.style.display="none"
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+            function extremo2() {
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+
+        </script>
+
+        </div>
+    </body>
+    <div class="s">
+        <hr/>
+        <br />
+        <h4>Studiosbuy(c)</h4>
+        <a href="mailto:brunimendoza16@gmail.com" class="a">Contactarnos</a>
+        <h4>Universal Shop 2024© San lorenzo - Paraguay</h4>
+        <h4>más información al +595 981 628907</h4>
+        <br />
+        <br />
+    </div>
+</html>

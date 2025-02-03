@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\BRUNNO-18\Pictures\Perfil.png">
+    <title>Compra</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .back {
+            background-image: image-set(url(https://i.ibb.co/pgVPrVK/Ajedrez.png));
+            background-attachment: fixed;
+            background-position: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(16px);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        @font-face {
+            font-family: COOPBL;
+            src: url(COOPBL.TTF) format("truetype");
+        }
+        .down {
+            z-index: 1;
+            position: relative;
+            font-family: COOPBL, sans-serif;
+        }
+        h1 {
+            font-family: COOPBL, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        .a {
+            text-align: center;
+        }
+        .b {
+            margin-left: 715px;
+        }
+        .c {
+            border: 2px solid green;
+            margin-left: 715px;
+        }
+        .d {
+            border: 2px solid red;
+            margin-left: 715px;
+        }
+    </style>
+</head>
+<body>
+<div class="back"></div>
+<h1>Compra</h1>
+<div class="down">
+    <form>
+        <h4 class="a">Si quieres seguir con la compra coloca tu correo electronico</h4>
+        <input type="text" id="correo" class="b">
+        <input type="button" value="Continuar" onclick="busq(document.getElementById('correo').value)" id="gr" class="b">
+    </form>
+    <script>
+        function busq(correo) {
+            var res = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+            var correoValido = res.test(correo);
+            if (correoValido) {
+                document.getElementById("correo").style.borderColor = "green";
+            var asunto = encodeURIComponent('Compra Render Ciudad Abandonada');
+            var cuerpo = encodeURIComponent(correo + ' compro el Render de la Ciudad Abandonada');
+            var mailtoLink = 'mailto:brunimendoza16@gmail.com?subject=' + asunto + '&body=' + cuerpo;
+            window.location.href = mailtoLink;
+            } else {
+                document.getElementById("correo").style.borderColor = "red"
+                alert("Invalido");
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

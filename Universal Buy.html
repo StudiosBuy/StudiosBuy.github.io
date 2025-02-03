@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Studiosbuy</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/5gpfMzjs/Logodepagina.jpg">
+        <html lang="es">
+        <meta charset="utf=8">
+        <link rel="stylesheet" type="text/css" href="Temas.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Serif+Todhri&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url("https://i.ibb.co/DffHN0M3/U1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            html{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            @font-face{
+                font-family: 'Bauhaus 93';
+                src: url(BAUHS93.TTF) format('truetype');
+            }
+            h1{
+                font-family: 'Bauhaus 93', sans-serif;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                position: relative;
+                display: inline-block;
+            }
+
+            li a{
+                display: block;
+                padding: 10px 20px;
+                background-color: #111;
+                color: white;
+                text-decoration: none;
+                transition: 0.5;
+            }
+            li a:hover{
+                background-color: rgba(11, 0, 51,);
+                backdrop-filter: blur(0px);
+            }
+            .submenu{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: rgba(17, 17, 17, 0);
+                backdrop-filter: blur(0px);
+                transition: 0.5s;
+            }
+
+            .submenu li{
+                display: block;
+                transition: 0.5s
+            }
+            .submenu li a{
+                background-color: rgba(17, 17, 17, 0);
+                transition: 0.5s;
+            }
+            .submenu li a:hover{
+                background-color: rgba(17, 17, 17, 0.5);
+                transition: 0.5s;
+            }
+            .parrafo1{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 20%;
+            }
+            .parrafo2{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 28%;
+            }
+            .parrafo3{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 31%;
+            }
+            .parrafo4{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 40%;
+            }
+            .parrafo5{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 49%;
+            }
+            .parrafo6{
+                background-color: #BEBEBE;
+                border-radius: 5px;
+                display: block;
+                width: auto;
+                max-width: 45%;
+            }
+            .barra{
+                background-color: #000;
+                display: block;
+                color: white;
+                text-align: center;
+                line-height: 500%;
+                position: relative;
+                top: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            a{
+                text-decoration: none;
+                display: block;
+                color: white;
+                padding: 10px 15px;
+            }
+            a:hover{
+                background-color: rgb(60, 60, 60);
+                text-shadow: 5px 5px 5px;
+                transition: 0.5s;
+            }
+            .button{
+                background-image: url(https://i.ibb.co/LhJ2mfpW/Lupa.png);
+                opacity: 0.5;
+                backdrop-filter: blur(10px);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                padding: 20px;
+                border: solid;
+                border-width: 1px;
+                cursor: pointer;
+                border-radius: 10px;
+                display: inline;
+                left: 75%;
+                position: fixed;
+                bottom: 90%;
+                transition: 0.3s;
+            }
+            .text{
+                left: 77%;
+                bottom: 89%;
+                position: fixed;
+                background-color: rgba(20, 20, 20, 0.5);
+                backdrop-filter: blur(5px);
+                border-radius: 5px;
+                color: white;
+                height: 4%;
+                font-family: "Noto Serif Todhri", sans-serif;
+                display: none;
+            }
+            .ja{
+                background-color: rgba(120, 120, 120, 0.5);
+                backdrop-filter: blur(5px);
+                height: 75%;
+                width: 75%;
+                display: inline-block;
+                position: fixed;
+                margin: 10px;
+                z-index: 1010;
+                left: 10%;
+                border-radius: 20px;
+                display: none;
+            }
+            .button2{
+                background-color: rgba(120, 120, 120, 0.7);
+                backdrop-filter: blur(5px);
+                padding: 0.5% 1%;
+                position: fixed;
+                z-index: 1011;
+                left: 84%;
+                display: none;
+                cursor: pointer;
+            }
+            .clase{
+                left: 20%;
+                z-index: 1011;
+                position: fixed;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border: double;
+                color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+                display: none;
+            }
+            .ref{
+                background-color: rgba(0, 180, 180, 0.5);
+                backdrop-filter: blur(5px);
+                max-height: 20%;
+                height: 10%;
+                width: 17%;
+                position: fixed;
+                top: 11%;
+                left: 77%;
+                z-index: 1010;
+                border-radius: 10px;
+                display: none;
+            }
+            .hgj{
+                text-decoration: none;
+                width: 17%;
+                z-index: 1010;
+                top: 11%;
+                left: 77%;
+                position: fixed;
+                display: none;
+                border-radius: 10px;
+            }
+h1{
+    @font-face {
+        font-family: 'Bauhaus 93';
+        src: url(BAUHS93.TTF) format('truetype');
+    }
+}
+p{
+   background-color: #BEBEBE;
+   border-radius: 5px;
+   display: block;
+   width: auto;
+   max-width: 47.5%;
+}
+img{
+    text-align: right;
+    float: right;
+}
+.content{
+    padding-top: 20px;
+    padding: 150px 20px 20px;
+}
+.menu{
+    background-image: url(https://i.ibb.co/6JYyJwp8/menu.png);
+    background-size: cover;
+    position: fixed;
+    width: 68px;
+    height: 50px;
+    border: none;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.menu2{
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 999;
+    display: inline-block;
+    display: block;
+    height: 100%;
+    width: 20%;
+    display: none;
+    padding-top: 60px;
+    font-size: 25px;
+    box-shadow: 10px 10px 50px;
+}
+@keyframes movimiento {
+    0% { left: -20%; }
+    100% { left: 0%; }
+}
+@keyframes reversa {
+    0% { left: 0%; }
+    100% { left: -20%; }
+}
+footer{
+    background-color:#FF8000;
+}
+        </style>
+    </head>
+    <body>
+        <div class="ref" id="fd"></div>
+        <a href="Modelos3D.html" class="hgj" id="adea">Pagina principal</a>
+        <button class="menu" alt="b" id="k" onclick="menu()"></button>
+        <div class="menu2" id="a">
+            <a href="Universal Buy.html">Inicio</a>
+            <a href="Modelos3D.html">Modelos3D</a>
+        </div>
+        <script>
+            var b = document.getElementById("a")
+            var p = document.getElementById("k")
+            var q = document.getElementById("w")
+            var v = document.getElementById("fd")
+
+            function menu() {
+                setTimeout(extremo2, 100)
+                p.style.boxShadow = "0px 0px 20px 3px white";
+                p.style.transition = "0.1s"
+                if(b.style.display=="block"){
+                    setTimeout(extremo, 1000)
+                    b.style.animation = "reversa 1s forwards"
+                }
+                else{
+                    
+                    b.style.display="block"
+                    b.style.animation = "movimiento 1s forwards"
+                }
+            }
+            function extremo() {
+                b.style.display="none"
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+            function extremo2() {
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+            function buscador() {
+                var q = document.getElementById("w")
+                var sa = document.getElementById("de")
+                var d = document.getElementById("hg")
+                var jdk = document.getElementById("op")
+                var java = document.getElementById("vx")
+                addEventListener("keydown", function(event){
+                    if (event.key == "Enter" && q.value.length >= 2) {
+                        d.style.display="block"
+                        jdk.style.display="block"
+                        java.style.display="block"
+                        java.textContent = "Se encontraron " + "de " + q.value + " 0" + " resultados"
+                    }
+                })
+                setTimeout(rf, 300)
+                sa.style.boxShadow="0px 0px 5px 5px white"
+                if (q.style.display=="block" && q.value.length == 0) {
+                    q.style.display="none"
+                }
+                else{
+                    q.style.display="block"
+                }
+            }
+            function rf() {
+                var sa = document.getElementById("de")
+                sa.style.boxShadow="0px 0px 0px 0px white"
+            }
+            function theaction() {
+                var d = document.getElementById("hg")
+                var jdk = document.getElementById("op")
+                var java = document.getElementById("vx")
+                d.style.display="none"
+                jdk.style.display="none"
+                java.style.display="none"
+            }
+            function onexit() {
+                v.style.display="none"
+            }
+            function ma() {
+                var bv = document.getElementById("adea")
+                v.style.display="block"
+                bv.style.display="block"
+            }
+            function action() {
+                var los = document.getElementById("lo")
+                los.style.display="block"
+            }
+        </script>
+        <h1 class="barra">Studiosbuy</h1>
+        <hr/>
+        <div class="ja" id="hg"></div>
+        <h2 class="clase" id="vx">Se Encontraron </h2>
+        <button class="button2" id="op" onclick="theaction()">x</button>
+                <a href="Modelos3D.html" onclick="action()">Modelos 3D</a>
+        <div class="content">
+        <p>Visitas: <span id="contador">0</span></p>
+        <script src="submenu.js"></script>
+        <button class="button" onclick="buscador()" id="de"></button>
+        <input type="text" class="text" id="w" placeholder="Modelos3D" onblur="onexit()" oninput="ma()">
+        <p class="parrafo1">
+            Bienvenidos
+            A la web del modelaje 3D.
+        </p>
+        <img src="https://i.ibb.co/3yfW5B0Q/media.png" width="500"/>
+        <p class="parrafo2">
+            Vendemos modelos 3D con animaciones, texturas, etc.<br />
+            A un precio de gratis a 10 dolares en formato .obj, .glb o .blend.
+        </p>
+        <br />
+        <h2>Historia de Blender</h2>
+        <br />
+        <p class="parrafo3">
+            <b>Blender fue desarrollado inicialmente como una aplicación</br>
+            interna por el estudio de animación holandés NeoGeo (sin <br />
+            relación con la marca de videojuegos ), y se lanzó <br />
+            oficialmente el 2 de enero de 1994.  La versión 1.00 se <br />
+            lanzó en enero de 1995,  siendo el autor principal el <br />
+            copropietario de la empresa y desarrollador de software <br />
+            Ton Roosendaal . El nombre Blender se inspiró en una <br />
+            canción de la banda electrónica suiza Yello , del álbum Baby <br />
+            , que NeoGeo usó en su showreel . Algunas opciones de <br />
+            diseño y experiencias para Blender fueron transferidas de <br />
+            una aplicación de software anterior, llamada Traces, que <br />
+            Roosendaal desarrolló para NeoGeo en la plataforma <br />
+            Commodore Amiga durante el período 1987-1991.</b>
+        </p>
+        <br />
+        <img src="https://i.ibb.co/sdFrnM2T/media.jpg" width="500"/>
+        <h3>Blender en sus inicios</h3>
+        <br />
+        <p class="parrafo4">
+            <b>El 1 de enero de 1998, Blender se lanzó al público en línea como freeware de SGI .<br />
+            NeoGeo se disolvió más tarde y los contratos con sus clientes fueron asumidos<br />
+            por otra empresa.<br />
+            Después de la disolución de NeoGeo,<br />
+            Ton Roosendaal fundó Not a Number Technologies<br />
+            (NaN) en junio de 1998 para seguir desarrollando Blender,<br />
+            distribuyéndolo inicialmente<br />
+            como shareware hasta que NaN se declaró en quiebra en 2002.<br />
+            Esto también resultó en la interrupción del desarrollo de Blender.</b>
+        </p>
+        <br />
+        <p class="parrafo5">
+            <b>En mayo de 2002, Roosendaal inició la fundación sin fines de lucro <br />
+            Blender Foundation , con el primer objetivo de encontrar una manera<br />
+            de continuar desarrollando y promoviendo Blender como un proyecto de<br />
+            código abierto basado en la comunidad. El 18 de julio de 2002,<br />
+            Roosendaal inició la campaña "Free Blender", un precursor del crowdfunding.<br />
+            La campaña tenía como objetivo convertir Blender en código abierto por un pago<br />
+            único de 100.000 € (100.670 USD en ese momento), y el dinero se recaudaría<br />
+            de la comunidad.  El 7 de septiembre de 2002, se anunció que habían recaudado<br />
+            fondos suficientes y que liberarían el código fuente de Blender .<br />
+            Hoy, Blender es un software libre y de código abierto, <br />
+            desarrollado en gran parte por su comunidad, así como por 26 empleados a tiempo completo<br />
+            y 12 autónomos empleados por el Blender Institute. </b>
+        </p>
+        <br />
+
+        <p class="parrafo6">
+            <b>La Blender Foundation se reservó inicialmente el derecho de utilizar licencia dual<br />
+            para que, además de la GPL 2.0 o posterior , Blender hubiera estado disponible<br />
+            también bajo la "Licencia Blender", que no requería revelar el código fuente<br />
+            pero sí pagos a la Blender Foundation. Sin embargo, esta opción nunca se ejerció<br />
+            y se suspendió indefinidamente en 2005. Blender está disponible únicamente bajo la<br />
+            "GNU GPLv2 o cualquier versión posterior" y no se actualizó a la GPLv3 ,<br />
+            ya que no se observaron "beneficios evidentes".  Las versiones binarias de Blender<br />
+            están bajo la GNU GPLv3 o posterior debido a las bibliotecas Apache incorporadas.</b>
+        </p>
+        <br />
+        <p>
+            <b>En 2019, con el lanzamiento de la versión 2.80, se eliminó el motor de juego integrado<br />
+            para crear y prototipar videojuegos; los desarrolladores de Blender recomendaron<br />
+            que los usuarios migraran a motores de juego de código abierto más potentes como Godot.</b>
+        </p>
+        <br />
+        <video width="500" height="300" controls>
+            <source src="Video1.mp4" type="video/mp4">
+        </video>
+        <hr/>
+        <a href="Modelos3D.html" a target="_blank">
+            <button>Modelos 3D</button>
+        </a>
+        </div>
+    </body>
+    <footer>
+        <hr/>
+        <br />
+        <h4>Studiosbuy(c)</h4>
+        <a href="mailto:brunimendoza16@gmail.com">Contactarnos</a>
+        <h4>Universal Shop 2024© San lorenzo - Paraguay</h4>
+        <h4>más información al +595 981 628907</h4>
+        <br />
+        <br />
+    </footer>
+</html>
