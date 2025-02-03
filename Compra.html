@@ -72,6 +72,7 @@
             var link = get()
             if (correoValido) {
                 document.getElementById("correo").style.borderColor = "green";
+                window.location.href = "Finalizador.html"
                     if (link === "1") {
                         localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
                         localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
@@ -80,7 +81,7 @@
             var asunto = encodeURIComponent(localStorage.getItem("elasunto"));
             var cuerpo = encodeURIComponent(correo + que);
             var mailtoLink = 'mailto:brunimendoza16@gmail.com?subject=' + asunto + '&body=' + cuerpo;
-            window.location.href = "Finalizador.html"
+            
             window.location.href = mailtoLink;
             
             } else {
