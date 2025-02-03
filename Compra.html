@@ -76,8 +76,8 @@
                         localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
                         localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
                     }
-            var que = localStorage.get("elque")
-            var asunto = encodeURIComponent(localStorage.get("elasunto"));
+            var que = localStorage.getItem("elque")
+            var asunto = encodeURIComponent(localStorage.getItem("elasunto"));
             var cuerpo = encodeURIComponent(correo + que);
             var mailtoLink = 'mailto:brunimendoza16@gmail.com?subject=' + asunto + '&body=' + cuerpo;
             window.location.href = mailtoLink;
