@@ -38,6 +38,8 @@ p{
     top: 0;
     width: 2500px;
     box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 0;
 }
 .content{
 flex: 1;
