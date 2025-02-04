@@ -8,6 +8,7 @@ body{
     padding: 0;
     height: 100%;
     display: flex;
+    width: 1600px;
     flex-direction: column;
 }
 html{
@@ -30,14 +31,13 @@ p{
 }
 .barra{
     background-color: #000;
-    display: block;
     color: white;
     text-align: center;
     line-height: 500%;
-    position: relative;
+    position: absolute;
     top: 0;
-    width: 100%;
-    box-sizing: border-box;
+    width: 1600px;
+    height: 180px;
 }
 .content{
 flex: 1;
