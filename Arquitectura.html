@@ -1,103 +1,161 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/JRB0FGq6/Perfil.png">
-    <title>Compra</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;            
-            background-image: url(https://i.ibb.co/pgVPrVK/Ajedrez.png);
-            background-attachment: fixed;
-            background-position: center;
-            align-items: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            backdrop-filter: blur(16px);
-            height: 100%;
+<!doctype html>
+<html>
+    <head>
+        <title>Arquitectura</title>
+        <link rel="shortcut icon" type="image/x-icon" href="Logodepagina.ico">
+        <html lang="es">
+        <meta charset="utf=8">
+        <link rel="stylesheet" type="text/css" href="estilos3.css" />
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: image-set(
+                    url(U1.jpg)1x
+                );
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            html{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            @font-face{
+                font-family: 'Bauhaus 93';
+                src: url(BAUHS93.TTF) format('truetype');
+            }
+            h1{
+                font-family: 'Bauhaus 93', sans-serif;
+            }
+            .barra{
+                background-color: #000;
+                display: block;
+                color: white;
+                text-align: center;
+                line-height: 500%;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .a{
+                text-decoration: none;
+                display: block;
+                color: white;
+                padding: 10px 15px;
+            }
+            .a:hover{
+                background-color: rgb(60, 60, 60);
+                text-shadow: 5px 5px 5px;
+                transition: 0.5s;
+            }
+        .class1{
+            top: 500px;
+            left: 425px;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            background-color: red;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: solid black;
+            border-width: 1px;
+            padding: 7px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
         }
-        @font-face {
-            font-family: COOPBL;
-            src: url(COOPBL.TTF) format("truetype");
+        .class1:hover{
+            text-shadow: 5px 5px 5px;
+            box-shadow: 0px 0px 10px 10px gray;
         }
-        .down {
-            z-index: 1;
-            position: relative;
-            font-family: COOPBL, sans-serif;
+        .image{
+            position: absolute;
+            left: 20px;
+            border-radius: 10px;
+            top: 200px;
         }
-        h1 {
-            font-family: COOPBL, sans-serif;
+        .barra {
+            font-size: 2em;
             text-align: center;
-            position: relative;
-        }
-        .a {
-            text-align: center;
-        }
-        .b {
-            text-align: center;
-        }
-        .c {
-            border: 2px solid green;
-            margin-left: 715px;
-        }
-        .d {
-            border: 2px solid red;
-            margin-left: 715px;
         }
     </style>
 </head>
 <body>
-<h1 style="text-align: center;">Compra</h1>
-<div class="down">
-    <form>
-        <h4 class="a">Si quieres seguir con la compra coloca tu correo electronico</h4>
-        <input type="text" title="a" id="correo" class="b" >
-        <input type="button" value="Continuar" onclick="busq(document.getElementById('correo').value)" id="gr" class="b">
-    </form>
-    <script>
-        function get() {
-            var a1 = new URLSearchParams(window.location.search)
-            return a1.get("link")
-        }
-        function busq(correo) {
-            var res = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-            var correoValido = res.test(correo);
-            var link = get()
-            if (correoValido) {
-                document.getElementById("correo").style.borderColor = "green";
-                
-                    if (link === "1") {
-                        localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
-                        localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
-                    }
-                    else if (link === "2") {
-                        localStorage.setItem("elque", " quiere comprar el Teclado")
-                        localStorage.setItem("elasunto", "Compra de el Teclado")
-                    }
-            var que = localStorage.getItem("elque")
-            var asunto = encodeURIComponent(localStorage.getItem("elasunto"));
-            var cuerpo = encodeURIComponent(correo + que);
-            var mailtoLink = 'mailto:brunimendoza16@gmail.com?subject=' + asunto + '&body=' + cuerpo;
-            
-            window.location.href = mailtoLink;
-
-            setTimeout(function(){
-                window.location.href = "Finalizador.html"
-            }, 500)
-            
-            } else {
-                document.getElementById("correo").style.borderColor = "red"
-                alert("Invalido");
-            }
-        }
-    </script>
-</div>
+    <h1 class="barra">Arquitectura</h1>
+    <img src="https://i.ibb.co/hx1S1zgk/1.png" width="500px" class="image">
+    <a href="https://www.dropbox.com/scl/fi/6vg3hzgmqo4ws081jeut5/Pedazo-de-Alambre-obj.rar?rlkey=sdu5k70xqhn1r90aeiod87pbv&dl=1">
+        <button class="class1">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/DcBdT3J/Ciudad.png" width="500px" style="left: 700px;" class="image">
+    <a href="Compra.html?link=1">
+        <button class="class1" style="left: 650px;">Descarga | 1 USD</button>
+    </a>
+    <img src="https://i.ibb.co/xtP8y584/2.png" width="500px" style="top: 600px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/n046rgo684lizb9195boe/Ladrillo-glb.rar?rlkey=o08gd0fgw5qpt7uq9j04nvu0q&dl=1">
+        <button class="class1" style="top: 900px;">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/6cc8nvk4/3.png" width="500px" style="top: 600px; left: 700px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/e8hyex958uh8x1yqht4lg/Piso-obj.rar?rlkey=efdmso3fofwxviqoyivtdde3q&dl=1">
+        <button class="class1" style="top: 900px; left: 650px;">Descarga | Gratis</button>
+    </a>
+    <img src="https://i.ibb.co/YTQypz8j/4.png" width="500px" style="top: 1000px;" class="image">
+    <a href="https://www.dropbox.com/scl/fi/ykslfm5e2ic32s51o320p/Teja.rar?rlkey=uhbxm4e5uitnct2u8ruhhduh1&dl=1">
+        <button class="class1" style="top: 1300px;">Descarga | Gratis</button>
+    </a>
 </body>
+</html>
+
+        <div class="content">     
+        <button class="menu" alt="b" id="k" onclick="menu()"></button>
+        <div class="menu2" id="a">
+            <a href="Universal Buy.html" class="a">Inicio</a>
+            <a href="Modelos3D.html" class="a">Modelos3D</a>
+        </div>
+        <script>
+            var b = document.getElementById("a")
+            var p = document.getElementById("k")
+            function menu() {
+                setTimeout(extremo2, 100)
+                p.style.boxShadow = "0px 0px 20px 3px white";
+                p.style.transition = "0.1s"
+                if(b.style.display=="block"){
+                    setTimeout(extremo, 1000)
+                    b.style.animation = "reversa 1s forwards"
+                }
+                else{
+                    
+                    b.style.display="block"
+                    b.style.animation = "movimiento 1s forwards"
+                }
+            }
+            function extremo() {
+                b.style.display="none"
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+            function extremo2() {
+                p.style.boxShadow = "0px 0px 0px 0px white";
+            }
+
+        </script>
+
+        </div>
+    </body>
+    <div class="s" style="width: 1600px;">
+        <hr/>
+        <br />
+        <h4>Studiosbuy(c)</h4>
+        <a href="mailto:brunimendoza16@gmail.com" class="a">Contactarnos</a>
+        <h4>Universal Shop 2024© San lorenzo - Paraguay</h4>
+        <h4>más información al +595 981 628907</h4>
+        <br />
+        <br />
+    </div>
 </html>
