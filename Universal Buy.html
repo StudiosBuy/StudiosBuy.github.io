@@ -140,7 +140,7 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            a{
+            .a{
                 text-decoration: none;
                 display: block;
                 color: white;
@@ -229,7 +229,7 @@
                 border-radius: 10px;
                 display: none;
             }
-            .hgj{
+            .clase{
                 text-decoration: none;
                 width: 17%;
                 z-index: 1010;
@@ -244,13 +244,6 @@ h1{
         font-family: 'Bauhaus 93';
         src: url(BAUHS93.TTF) format('truetype');
     }
-}
-p{
-   background-color: #BEBEBE;
-   border-radius: 5px;
-   display: block;
-   width: auto;
-   max-width: 47.5%;
 }
 img{
     text-align: right;
@@ -304,11 +297,11 @@ footer{
     </head>
     <body>
         <div class="ref" id="fd"></div>
-        <a href="Modelos3D.html" class="hgj" id="adea">Pagina principal</a>
+        <a href="Modelos3D.html" class="clase" id="adea">Pagina principal</a>
         <button class="menu" alt="b" id="k" onclick="menu()"></button>
         <div class="menu2" id="a">
-            <a href="Universal Buy.html">Inicio</a>
-            <a href="Modelos3D.html">Modelos3D</a>
+            <a href="Universal Buy.html" class="a">Inicio</a>
+            <a href="Modelos3D.html" class="a">Modelos3D</a>
         </div>
         <script>
             var b = document.getElementById("a")
@@ -392,7 +385,6 @@ footer{
         <button class="button2" id="op" onclick="theaction()">x</button>
                 <a href="Modelos3D.html" onclick="action()">Modelos 3D</a>
         <div class="content">
-        <p>Visitas: <span id="contador">0</span></p>
         <script src="submenu.js"></script>
         <button class="button" onclick="buscador()" id="de"></button>
         <input type="text" class="text" id="w" placeholder="Modelos3D" onblur="onexit()" oninput="ma()">
