@@ -37,6 +37,7 @@ p{
     top: 0;
     width: 1600px;
     height: 21%;
+    line-height: 500%;
 }
 .content{
 flex: 1;
