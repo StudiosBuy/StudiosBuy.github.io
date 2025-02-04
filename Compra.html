@@ -77,6 +77,10 @@
                         localStorage.setItem("elque", " quiere comprar el Render de Ciudad Abandonada")
                         localStorage.setItem("elasunto", "Venta de el Render(Ciudad Abandonada)")
                     }
+                    else if (link === "2") {
+                        localStorage.setItem("elque", " quiere comprar el Teclado")
+                        localStorage.setItem("elasunto", "Compra de el Teclado")
+                    }
             var que = localStorage.getItem("elque")
             var asunto = encodeURIComponent(localStorage.getItem("elasunto"));
             var cuerpo = encodeURIComponent(correo + que);
