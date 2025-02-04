@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 1600px;
     display: flex;
     flex-direction: column;
 }
@@ -30,16 +31,12 @@ p{
 }
 .barra{
     background-color: #000;
-    display: block;
     color: white;
     text-align: center;
-    line-height: 500%;
-    position: relative;
+    position: absolute;
     top: 0;
-    width: 2500px;
-    box-sizing: border-box;
-    margin-right: 0;
-    margin-left: 0;
+    width: 1600px;
+    height: 21%;
 }
 .content{
 flex: 1;
