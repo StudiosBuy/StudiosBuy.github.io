@@ -310,7 +310,9 @@ footer{
     </head>
     <body>
         <div class="ref" id="fd"></div>
-        <a href="Modelos3D.html" onclick="ifclick()" class="options" id="adea">Pagina principal</a>
+        <a href="Modelos3D.html">
+            <button class="options" id="adea">Pagina Principal</button>
+        </a>
         <button class="menu" alt="b" id="k" onclick="menu()"></button>
         <div class="menu2" id="a">
             <a href="Universal Buy.html" class="a">Inicio</a>
@@ -387,14 +389,10 @@ footer{
             function onexit() {
                 var javas = document.getElementById("adea")
                 v.style.display="none"
-                javas.style.display="none"
             }
             function action() {
                 var los = document.getElementById("lo")
                 los.style.display="block"
-            }
-            function ifclick(){
-                window.location.href("Modelos3D.html")
             }
         </script>
         <h1 class="barra">Studiosbuy</h1>
