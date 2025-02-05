@@ -206,7 +206,7 @@
                 display: none;
                 cursor: pointer;
             }
-            .clase{
+            .clase2{
                 left: 20%;
                 z-index: 1011;
                 position: fixed;
@@ -282,6 +282,19 @@ img{
     font-size: 25px;
     box-shadow: 10px 10px 50px;
 }
+.options{
+    position: fixed;
+    z-index: 1000;
+    left: 77%;
+    top: 11%;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.5);
+    padding: 10px;
+    padding-right: 60px;
+    display: none;
+}
 @keyframes movimiento {
     0% { left: -20%; }
     100% { left: 0%; }
@@ -297,7 +310,7 @@ footer{
     </head>
     <body>
         <div class="ref" id="fd"></div>
-        <a href="Modelos3D.html" class="clase" id="adea">Pagina principal</a>
+        <a href="Modelos3D.html" class="options" id="adea">Pagina principal</a>
         <button class="menu" alt="b" id="k" onclick="menu()"></button>
         <div class="menu2" id="a">
             <a href="Universal Buy.html" class="a">Inicio</a>
@@ -336,12 +349,18 @@ footer{
                 var d = document.getElementById("hg")
                 var jdk = document.getElementById("op")
                 var java = document.getElementById("vx")
+                var javas = document.getElementById("adea")
+                
                 addEventListener("keydown", function(event){
-                    if (event.key == "Enter" && q.value.length >= 2) {
+                    var key = event.key.toLowerCase()
+                    if (key == "enter" && q.value.length >= 2) {
                         d.style.display="block"
                         jdk.style.display="block"
                         java.style.display="block"
                         java.textContent = "Se encontraron " + "de " + q.value + " 0" + " resultados"
+                    }
+                    else if(key >= 'a' && key <= 'z' && q.value.length == 1){
+                        javas.style.display="block"
                     }
                 })
                 setTimeout(rf, 300)
@@ -366,12 +385,9 @@ footer{
                 java.style.display="none"
             }
             function onexit() {
+                var javas = document.getElementById("adea")
                 v.style.display="none"
-            }
-            function ma() {
-                var bv = document.getElementById("adea")
-                v.style.display="block"
-                bv.style.display="block"
+                javas.style.display="none"
             }
             function action() {
                 var los = document.getElementById("lo")
@@ -381,13 +397,13 @@ footer{
         <h1 class="barra">Studiosbuy</h1>
         <hr/>
         <div class="ja" id="hg"></div>
-        <h2 class="clase" id="vx">Se Encontraron </h2>
+        <h2 class="clase2" id="vx">Se Encontraron </h2>
         <button class="button2" id="op" onclick="theaction()">x</button>
-                <a href="Modelos3D.html" onclick="action()" style="text-decoration: none; background-color: rgba(10, 10, 20, 0.5); padding: 10px; backdrop-filter: blur(5px); color: white; cursor: cursor: pointer;">Modelos 3D</a>
+                <a href="Modelos3D.html" onclick="action()" style="text-decoration: none; background-color: rgba(10, 10, 20, 0.5); padding: 10px; backdrop-filter: blur(5px); color: white;  cursor: pointer;">Modelos 3D</a>
         <div class="content">
         <script src="submenu.js"></script>
         <button class="button" onclick="buscador()" id="de"></button>
-        <input type="text" class="text" id="w" placeholder="Modelos3D" onblur="onexit()" oninput="ma()">
+        <input type="text" class="text" id="w" placeholder="Modelos3D" onblur="onexit()">
         <p class="parrafo2">
             Bienvenidos
             A la web del modelaje 3D.
